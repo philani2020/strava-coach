@@ -1,0 +1,15 @@
+{
+  "timezone": "Africa/Johannesburg",
+  "max_heart_rate": 190,
+  "easy_hr_ceiling": 0.78,
+  "goals": {
+    "weekly_distance_km": 40,
+    "gym_sessions_per_week": 2,
+    "focus": "Build a consistent running base while keeping two strength sessions a week",
+    "target_event": null
+  },
+  "coaches": {
+    "snark": "Coach Dunkley",
+    "kind": "Coach Amari"
+  }
+}

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training week 14–20 September</title>
+<meta name="description" content="Weekly training review">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #e7e9e3;
+  --ink: #16211e;
+  --muted: #5c6a64;
+  --rule: #c9cfc7;
+  --run: #2f6b58;
+  --lift: #9d5a3c;
+  --ash: #9ea8a2;
+  --signal: #6f7d18;
+  --sans: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0f1a18;
+    --ink: #e2e7e1;
+    --muted: #93a099;
+    --rule: #26332f;
+    --run: #4e9e84;
+    --lift: #c9805c;
+    --ash: #566159;
+    --signal: #cbd84a;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  padding: clamp(1.5rem, 5vw, 4rem) clamp(1.15rem, 5vw, 2rem) 5rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+main { max-width: 46rem; margin: 0 auto; }
+h1, h2 { font-weight: 700; letter-spacing: -0.015em; }
+
+.when { color: var(--muted); font-size: 0.875rem; margin: 0 0 1.75rem; }
+
+/* Hero: the shape of the week */
+.week { display: grid; grid-template-columns: repeat(7, 1fr); gap: clamp(4px, 1.4vw, 10px); }
+.day { display: flex; flex-direction: column; min-width: 0; }
+.track {
+  height: clamp(96px, 26vw, 168px);
+  display: flex; align-items: flex-end;
+  border-bottom: 2px solid var(--ink);
+}
+.bar {
+  width: 100%; height: var(--h);
+  animation: grow .6s cubic-bezier(.2,.8,.3,1) both;
+  animation-delay: calc(var(--i) * 55ms);
+}
+.bar.run { background: var(--run); }
+.bar.lift { background: var(--lift); }
+.bar.ash { background: var(--ash); }
+.bar.rest { background: var(--rule); }
+@keyframes grow { from { height: 0; } to { height: var(--h); } }
+@media (prefers-reduced-motion: reduce) { .bar { animation: none; } }
+.dayname { font-size: 0.75rem; color: var(--muted); padding-top: .4rem; }
+.dayval { font-size: 0.75rem; font-weight: 500; }
+
+.key { display: flex; gap: 1.25rem; margin: 1.1rem 0 0; padding: 0; list-style: none;
+  font-size: 0.8125rem; color: var(--muted); }
+.key span { display: inline-block; width: .6rem; height: .6rem; margin-right: .4rem; }
+.key .k-run { background: var(--run); }
+.key .k-lift { background: var(--lift); }
+.key .k-rest { background: var(--rule); }
+
+h1 { font-size: clamp(1.6rem, 5.5vw, 2.4rem); line-height: 1.12; margin: 2rem 0 0; }
+
+/* The argument. Each coach keeps one colour throughout the page. */
+.exchange { margin: 1.5rem 0 2.5rem; max-width: 36em; }
+.turn { padding: 0 0 0 1.1rem; border-left: 3px solid; margin-bottom: 1.5rem; }
+.turn.snark { border-color: var(--lift); }
+.turn.kind { border-color: var(--run); }
+.who { font-size: 0.8125rem; font-weight: 700; margin: 0 0 .35rem; }
+.turn.snark .who { color: var(--lift); }
+.turn.kind .who { color: var(--run); }
+.said {
+  font-family: var(--serif); font-size: 1.125rem; line-height: 1.6; margin: 0;
+}
+
+.tips { list-style: none; padding: 0; margin: 0; max-width: 36em; }
+.tip { padding: .55rem 0 .55rem 1.1rem; border-left: 3px solid; margin-bottom: .5rem; }
+.tip.snark { border-color: var(--lift); }
+.tip.kind { border-color: var(--run); }
+.from { display: block; font-size: 0.75rem; font-weight: 700; }
+.tip.snark .from { color: var(--lift); }
+.tip.kind .from { color: var(--run); }
+.advice { display: block; }
+
+h2 { font-size: 0.9375rem; margin: 2.5rem 0 .85rem;
+  padding-bottom: .4rem; border-bottom: 1px solid var(--rule); }
+
+.marks { list-style: none; padding: 0; margin: 0; max-width: 36em; }
+.marks li { padding: .45rem 0 .45rem 1.4rem; position: relative; }
+.marks li::before { position: absolute; left: 0; top: .45rem; font-weight: 700; }
+.marks li.good::before { content: "\2713"; color: var(--run); }
+.marks li.watch::before { content: "\2022"; color: var(--lift); }
+.marks li.next::before { content: "\2192"; color: var(--muted); }
+
+.stats { display: grid; gap: 1px 1px; margin: 0;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  background: var(--rule); border: 1px solid var(--rule); }
+.stat { background: var(--paper); padding: .8rem .9rem; }
+.stat dt { font-size: 0.75rem; color: var(--muted); }
+.stat dd { margin: .15rem 0 0; }
+.figure { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
+.unit { font-size: 0.8125rem; color: var(--muted); margin-left: .2rem; }
+
+.trendbars { display: flex; align-items: flex-end; gap: 3px;
+  height: 72px; border-bottom: 1px solid var(--rule); }
+.tbar { flex: 1; height: var(--h); background: var(--rule); }
+.tbar.current { background: var(--run); }
+.scale { font-size: 0.75rem; color: var(--muted); margin: .5rem 0 0; }
+
+details { border-bottom: 1px solid var(--rule); }
+summary { cursor: pointer; padding: .7rem 0; display: flex; gap: .85rem;
+  align-items: baseline; font-size: 0.9375rem; }
+summary::-webkit-details-marker { display: none; }
+.awhen { color: var(--muted); font-size: 0.8125rem; min-width: 6.5rem; }
+.awhat { flex: 1; }
+.akm { font-weight: 700; }
+.abody { padding: 0 0 1rem; max-width: 34em; }
+.abody p { font-family: var(--serif); margin: 0 0 .75rem; }
+
+footer { margin-top: 3.5rem; padding-top: 1rem; border-top: 1px solid var(--rule);
+  font-size: 0.75rem; color: var(--muted); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="when">Week of 14–20 September</p>
+  <div class="week"><div class="day" style="--i:0"><div class="track"><div class="bar run" style="--h:100%" title="Parkrun"></div></div><div class="dayname">Mon</div><div class="dayval">11.4 km</div></div><div class="day" style="--i:1"><div class="track"><div class="bar lift" style="--h:45%" title="Upper body"></div></div><div class="dayname">Tue</div><div class="dayval">69m</div></div><div class="day" style="--i:2"><div class="track"><div class="bar run" style="--h:83%" title="Morning run"></div></div><div class="dayname">Wed</div><div class="dayval">12.1 km</div></div><div class="day" style="--i:3"><div class="track"><div class="bar rest" style="--h:2%" title="Rest"></div></div><div class="dayname">Thu</div><div class="dayval"></div></div><div class="day" style="--i:4"><div class="track"><div class="bar rest" style="--h:2%" title="Rest"></div></div><div class="dayname">Fri</div><div class="dayval"></div></div><div class="day" style="--i:5"><div class="track"><div class="bar rest" style="--h:2%" title="Rest"></div></div><div class="dayname">Sat</div><div class="dayval"></div></div><div class="day" style="--i:6"><div class="track"><div class="bar run" style="--h:68%" title="Evening km"></div></div><div class="dayname">Sun</div><div class="dayval">10 km</div></div></div>
+  <ul class="key">
+    <li><span class="k-run"></span>Run</li>
+    <li><span class="k-lift"></span>Gym</li>
+    <li><span class="k-rest"></span>Rest</li>
+  </ul>
+
+  <h1>33.5 km, 1 gym, 4 of 7 days</h1>
+
+  <div class="exchange"><div class="turn snark"><p class="who">Coach Dunkley</p><p class="said">33.5 km across 4 of seven days, 242 minutes of moving time. It is training. I would not call it a campaign.</p></div><div class="turn kind"><p class="who">Coach Amari</p><p class="said">He has once again said nothing about the 1 strength session(s) or the 12.1 km long run. 4 days out of seven while holding down a life is the part that actually compounds.</p></div></div>
+
+  <h2>What went well</h2><ul class="marks"><li class="good">Trained on 4 days</li><li class="good">Longest run of 12.1 km</li><li class="good">Most of the running kept easy</li></ul>
+  
+
+  <h2>What they want from you this week</h2>
+  <ul class="tips"><li class="tip snark"><span class="from">Coach Dunkley</span><span class="advice">Add nothing. Repeat this week without the excuses.</span></li><li class="tip kind"><span class="from">Coach Amari</span><span class="advice">Keep next week&#x27;s easy runs conversational and protect two gym slots.</span></li></ul>
+
+  <h2>The numbers</h2>
+  <dl class="stats"><div class="stat"><dt>Distance</dt><dd><span class="figure">33.5</span><span class="unit">km</span></dd></div><div class="stat"><dt>Runs</dt><dd><span class="figure">3</span></dd></div><div class="stat"><dt>Gym sessions</dt><dd><span class="figure">1</span></dd></div><div class="stat"><dt>Moving time</dt><dd><span class="figure">4h 02m</span></dd></div><div class="stat"><dt>Average pace</dt><dd><span class="figure">5:09</span><span class="unit">/km</span></dd></div><div class="stat"><dt>Longest run</dt><dd><span class="figure">12.1</span><span class="unit">km</span></dd></div><div class="stat"><dt>Climbing</dt><dd><span class="figure">216</span><span class="unit">m</span></dd></div><div class="stat"><dt>Days trained</dt><dd><span class="figure">4</span><span class="unit">of 7</span></dd></div><div class="stat"><dt>Versus your norm</dt><dd><span class="figure">+21</span><span class="unit">%</span></dd></div><div class="stat"><dt>Load ratio</dt><dd><span class="figure">0.96</span></dd></div></dl>
+
+  <section class="trend"><h2>Running distance, last twelve weeks</h2><div class="trendbars"><div class="tbar" style="--h:49%" title="29–5 July: 16.9 km"></div><div class="tbar" style="--h:69%" title="6–12 July: 23.7 km"></div><div class="tbar" style="--h:61%" title="13–19 July: 20.9 km"></div><div class="tbar" style="--h:68%" title="20–26 July: 23.4 km"></div><div class="tbar" style="--h:77%" title="27–2 August: 26.2 km"></div><div class="tbar" style="--h:75%" title="3–9 August: 25.6 km"></div><div class="tbar" style="--h:100%" title="10–16 August: 34.2 km"></div><div class="tbar" style="--h:87%" title="17–23 August: 29.7 km"></div><div class="tbar" style="--h:93%" title="24–30 August: 31.9 km"></div><div class="tbar" style="--h:95%" title="31–6 September: 32.4 km"></div><div class="tbar" style="--h:49%" title="7–13 September: 16.9 km"></div><div class="tbar current" style="--h:98%" title="14–20 September: 33.5 km"></div></div><p class="scale">29–5 July to 14–20 September &middot; peak 34.2 km</p></section>
+  
+
+  <footer>
+    Built from your Strava activities on 25 September 2026 at 15:28, by a rules-based fallback.<br>
+    The commentary comes from an app that simulates two coaches arguing about
+    one athlete's training. The numbers are real; the coaches are not.
+  </footer>
+</main>
+</body>
+</html>
