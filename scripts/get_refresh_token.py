@@ -94,6 +94,13 @@ def main() -> None:
         },
         timeout=30,
     )
+    if tokens.status_code in (400, 401):
+        raise SystemExit(
+            f"\nStrava refused the code exchange ({tokens.status_code}): {tokens.text[:300]}\n"
+            "This almost always means the Client Secret doesn't match the Client ID. "
+            "Copy the Client Secret (click 'Show') from https://www.strava.com/settings/api, "
+            "not 'Your Access Token' or 'Your Refresh Token'."
+        )
     tokens.raise_for_status()
     tokens = tokens.json()
 
