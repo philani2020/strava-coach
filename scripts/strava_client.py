@@ -146,6 +146,13 @@ def fetch_activities(access_token: str, after_epoch: int, before_epoch: int) -> 
             time.sleep(wait)
             continue
 
+        if response.status_code in (401, 403):
+            raise StravaError(
+                "Strava refused to list activities, so the refresh token lacks the "
+                "activity:read_all scope. The token shown on strava.com/settings/api "
+                "only has 'read'. Run scripts/get_refresh_token.py, tick the "
+                "activities boxes, and update STRAVA_REFRESH_TOKEN."
+            )
         response.raise_for_status()
         batch = response.json()
         if not batch:
