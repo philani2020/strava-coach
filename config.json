@@ -3,9 +3,9 @@
   "max_heart_rate": 190,
   "easy_hr_ceiling": 0.78,
   "goals": {
-    "weekly_distance_km": 40,
-    "gym_sessions_per_week": 2,
-    "focus": "Build a consistent running base while keeping two strength sessions a week",
+    "weekly_distance_km": 10,
+    "gym_sessions_per_week": 3,
+    "focus": "Recovering from double lower tendon injuries, getting back into running",
     "target_event": null
   },
   "coaches": {
