@@ -146,6 +146,13 @@ def fetch_activities(access_token: str, after_epoch: int, before_epoch: int) -> 
             time.sleep(wait)
             continue
 
+        if response.status_code == 403 and '"Inactive"' in response.text:
+            raise StravaError(
+                "Strava says this API application is inactive, so it won't serve data "
+                "whatever the token. Check https://www.strava.com/settings/api for a "
+                "notice or an agreement to accept, or ask Strava developer support.\n"
+                f"Strava said: {response.text[:500]}"
+            )
         if response.status_code in (401, 403):
             raise StravaError(
                 "Strava refused to list activities, so the refresh token lacks the "
