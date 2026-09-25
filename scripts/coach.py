@@ -118,28 +118,37 @@ def _post(url: str, **kwargs) -> requests.Response:
             break
         print(f"Model returned {response.status_code}, retrying in {wait}s.")
         time.sleep(wait)
+    if not response.ok:
+        print(f"Model provider said: {response.text[:500]}")
     response.raise_for_status()
     return response
+
+
+def _groq_models(key: str) -> list[str]:
+    """Model ids the Groq key can use, for the log when the configured one is gone."""
+    try:
+        listing = requests.get(
+            "https://api.groq.com/openai/v1/models",
+            headers={"Authorization": f"Bearer {key}"},
+            timeout=TIMEOUT,
+        )
+        return sorted(m["id"] for m in listing.json().get("data", []))
+    except Exception:  # noqa: BLE001 - diagnostics only
+        return []
 
 
 def _call(system: str, user: str) -> str:
     provider = (os.environ.get("LLM_PROVIDER") or "gemini").lower()
 
     if provider == "groq":
-        response = _post(
-            "https://api.groq.com/openai/v1/chat/completions",
-            headers={"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}"},
-            json={
-                "model": os.environ.get("LLM_MODEL") or "llama-3.3-70b-versatile",
-                "temperature": 0.9,
-                "response_format": {"type": "json_object"},
-                "messages": [
-                    {"role": "system", "content": system},
-                    {"role": "user", "content": user},
-                ],
-            },
-        )
-        return response.json()["choices"][0]["message"]["content"]
+        try:
+            return _call_groq(system, user)
+        except requests.HTTPError as error:
+            if error.response is not None and error.response.status_code == 404:
+                models = _groq_models(os.environ["GROQ_API_KEY"])
+                print("Groq models available: " + (", ".join(models) or "(could not list)"))
+                print("Set one as the LLM_MODEL repository variable.")
+            raise
 
     model = os.environ.get("LLM_MODEL") or "gemini-flash-latest"
     response = _post(
@@ -152,6 +161,23 @@ def _call(system: str, user: str) -> str:
         },
     )
     return response.json()["candidates"][0]["content"]["parts"][0]["text"]
+
+
+def _call_groq(system: str, user: str) -> str:
+    response = _post(
+        "https://api.groq.com/openai/v1/chat/completions",
+        headers={"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}"},
+        json={
+            "model": os.environ.get("LLM_MODEL") or "llama-3.3-70b-versatile",
+            "temperature": 0.9,
+            "response_format": {"type": "json_object"},
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
+            ],
+        },
+    )
+    return response.json()["choices"][0]["message"]["content"]
 
 
 def _parse(raw: str) -> dict:
