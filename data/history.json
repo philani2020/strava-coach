@@ -1462,27 +1462,27 @@
         {
           "role": "snark",
           "name": "Coach Dunkley",
-          "comment": "7.2 km across 4 of seven days, 193 minutes of moving time. It is training. I would not call it a campaign."
+          "comment": "Two runs totalling 7.2\u202fkm and three gym sessions squeeze a load of 298, which is a glaring spike. Your mileage jump of 433\u202f% barely scratches the 40\u202fkm weekly target and leaves you without any easy runs. At least you kept the training days to four, but that\u2019s hardly a consolation."
         },
         {
           "role": "kind",
           "name": "Coach Amari",
-          "comment": "He has once again said nothing about the 3 strength session(s) or the 5 km long run. 4 days out of seven while holding down a life is the part that actually compounds."
+          "comment": "While the load of 298 is higher than previous weeks, it reflects the intentional increase to three strength sessions, not an uncontrolled spike. You actually exceeded the gym target (3 sessions vs 2) and delivered a 5\u202fkm run, raising your weekly distance from 1.4\u202fkm baseline to 7.2\u202fkm\u2014a 433\u202f% increase that moves you toward the 40\u202fkm goal. The consistency of training on four days and the steady pace of 7:09\u202fmin/km show solid effort. Coach Dunkley\u2019s focus on the numbers missed the qualitative progress you made this week."
         }
       ],
       "next_week": [
         {
           "role": "snark",
           "name": "Coach Dunkley",
-          "text": "Add nothing. Repeat this week without the excuses."
+          "text": "Next week aim to keep weekly load below 200 and include at least one easy run of 3\u20134\u202fkm to rebuild a sustainable base."
         },
         {
           "role": "kind",
           "name": "Coach Amari",
-          "text": "Keep next week's easy runs conversational and protect two gym slots."
+          "text": "Add a relaxed 3\u20134\u202fkm easy run early next week to promote recovery and keep the weekly load under 250 while maintaining the strength work."
         }
       ],
-      "generated_by": "fallback"
+      "generated_by": "groq:openai/gpt-oss-120b"
     }
   }
 }
