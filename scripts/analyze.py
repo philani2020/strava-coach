@@ -31,9 +31,13 @@ def classify(activity: dict) -> str:
 
 
 def local_start(activity: dict) -> datetime:
-    """Strava's start_date_local is the wall-clock time where you trained."""
+    """Strava's start_date_local is the wall-clock time where you trained.
+
+    Strava suffixes it with a misleading "Z", so any offset is dropped and the
+    result is always naive local time.
+    """
     raw = activity.get("start_date_local", "").replace("Z", "")
-    return datetime.fromisoformat(raw)
+    return datetime.fromisoformat(raw).replace(tzinfo=None)
 
 
 def last_complete_week(tz_name: str, today: datetime | None = None) -> tuple[datetime, datetime]:
@@ -83,7 +87,8 @@ def summarise_week(
 ) -> dict:
     """Build the full metric set for one Monday-to-Sunday block."""
     max_hr = config.get("max_heart_rate") or 0
-    in_week = [a for a in activities if start <= local_start(a) <= end]
+    wall_start, wall_end = start.replace(tzinfo=None), end.replace(tzinfo=None)
+    in_week = [a for a in activities if wall_start <= local_start(a) <= wall_end]
 
     runs = [a for a in in_week if classify(a) == "run"]
     gym = [a for a in in_week if classify(a) == "gym"]
