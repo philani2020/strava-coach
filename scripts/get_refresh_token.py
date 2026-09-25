@@ -29,17 +29,19 @@ REDIRECT_URI = f"http://localhost:{PORT}/exchange"
 SCOPE = "activity:read_all,profile:read_all"
 
 received_code: str | None = None
+granted_scope = ""
 
 
 class CallbackHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):  # noqa: N802
-        global received_code
+        global received_code, granted_scope
         query = urllib.parse.urlparse(self.path).query
         params = urllib.parse.parse_qs(query)
 
         if "code" in params:
             received_code = params["code"][0]
             granted = params.get("scope", [""])[0]
+            granted_scope = granted
             body = "Authorised. You can close this tab and return to the terminal."
             if "activity:read_all" not in granted:
                 body = (
@@ -99,6 +101,10 @@ def main() -> None:
     print(f"  STRAVA_CLIENT_ID      {client_id}")
     print(f"  STRAVA_CLIENT_SECRET  {client_secret}")
     print(f"  STRAVA_REFRESH_TOKEN  {tokens['refresh_token']}")
+    print(f"\nScopes granted: {granted_scope or '(none reported)'}")
+    if "activity:read_all" not in granted_scope:
+        print("WARNING: activity:read_all was NOT granted, so the weekly job will "
+              "get 403. Re-run and tick every box on the Strava page.")
     print(f"\nAthlete: {tokens.get('athlete', {}).get('firstname', 'unknown')}")
 
 
