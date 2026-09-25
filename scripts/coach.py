@@ -16,10 +16,13 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 
 import requests
 
 TIMEOUT = 90
+# Waits between attempts when the provider is overloaded (429/5xx).
+RETRY_WAITS = (15, 45)
 
 COACHES = {
     "snark": {
@@ -107,11 +110,23 @@ def _week_payload(week: dict, history: list[dict], config: dict) -> dict:
     }
 
 
+def _post(url: str, **kwargs) -> requests.Response:
+    """POST, retrying a couple of times while the provider is overloaded."""
+    for wait in (*RETRY_WAITS, None):
+        response = requests.post(url, timeout=TIMEOUT, **kwargs)
+        if response.status_code not in (429, 500, 502, 503, 504) or wait is None:
+            break
+        print(f"Model returned {response.status_code}, retrying in {wait}s.")
+        time.sleep(wait)
+    response.raise_for_status()
+    return response
+
+
 def _call(system: str, user: str) -> str:
     provider = (os.environ.get("LLM_PROVIDER") or "gemini").lower()
 
     if provider == "groq":
-        response = requests.post(
+        response = _post(
             "https://api.groq.com/openai/v1/chat/completions",
             headers={"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}"},
             json={
@@ -123,13 +138,11 @@ def _call(system: str, user: str) -> str:
                     {"role": "user", "content": user},
                 ],
             },
-            timeout=TIMEOUT,
         )
-        response.raise_for_status()
         return response.json()["choices"][0]["message"]["content"]
 
     model = os.environ.get("LLM_MODEL") or "gemini-flash-latest"
-    response = requests.post(
+    response = _post(
         f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
         headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]},
         json={
@@ -137,9 +150,7 @@ def _call(system: str, user: str) -> str:
             "contents": [{"role": "user", "parts": [{"text": user}]}],
             "generationConfig": {"temperature": 0.9, "responseMimeType": "application/json"},
         },
-        timeout=TIMEOUT,
     )
-    response.raise_for_status()
     return response.json()["candidates"][0]["content"]["parts"][0]["text"]
 
 
