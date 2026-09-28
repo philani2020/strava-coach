@@ -1,110 +1,6 @@
 {
   "weeks": [
     {
-      "week_id": "2026-W27",
-      "start": "2026-06-29",
-      "end": "2026-07-05",
-      "label": "29\u20135 July",
-      "run_count": 1,
-      "run_distance_km": 6.7,
-      "run_time_min": 43,
-      "run_elevation_m": 56,
-      "avg_pace": "6:24",
-      "longest_run_km": 6.7,
-      "longest_run_name": "Afternoon Run",
-      "gym_count": 1,
-      "gym_time_min": 51,
-      "other_count": 0,
-      "total_time_min": 94,
-      "load": 249.0,
-      "easy_runs": 0,
-      "hard_runs": 1,
-      "unclassified_runs": 0,
-      "trained_days": 2,
-      "longest_rest_streak": 4,
-      "days": [
-        {
-          "date": "2026-06-29",
-          "weekday": "Mon",
-          "load": 0,
-          "kind": "rest",
-          "distance_km": 0.0,
-          "sessions": []
-        },
-        {
-          "date": "2026-06-30",
-          "weekday": "Tue",
-          "load": 51.0,
-          "kind": "gym",
-          "distance_km": 0.0,
-          "sessions": [
-            {
-              "name": "Morning Weight Training",
-              "kind": "gym",
-              "distance_km": 0.0,
-              "minutes": 51,
-              "avg_hr": 140.5,
-              "pace": null
-            }
-          ]
-        },
-        {
-          "date": "2026-07-01",
-          "weekday": "Wed",
-          "load": 198.0,
-          "kind": "run",
-          "distance_km": 6.7,
-          "sessions": [
-            {
-              "name": "Afternoon Run",
-              "kind": "run",
-              "distance_km": 6.73,
-              "minutes": 43,
-              "avg_hr": 190.4,
-              "pace": "6:24"
-            }
-          ]
-        },
-        {
-          "date": "2026-07-02",
-          "weekday": "Thu",
-          "load": 0,
-          "kind": "rest",
-          "distance_km": 0.0,
-          "sessions": []
-        },
-        {
-          "date": "2026-07-03",
-          "weekday": "Fri",
-          "load": 0,
-          "kind": "rest",
-          "distance_km": 0.0,
-          "sessions": []
-        },
-        {
-          "date": "2026-07-04",
-          "weekday": "Sat",
-          "load": 0,
-          "kind": "rest",
-          "distance_km": 0.0,
-          "sessions": []
-        },
-        {
-          "date": "2026-07-05",
-          "weekday": "Sun",
-          "load": 0,
-          "kind": "rest",
-          "distance_km": 0.0,
-          "sessions": []
-        }
-      ],
-      "chronic_load": 0.0,
-      "acwr": null,
-      "distance_change_pct": null,
-      "baseline_distance_km": 0.0,
-      "flags": []
-    },
-    {
       "week_id": "2026-W28",
       "start": "2026-07-06",
       "end": "2026-07-12",
@@ -211,10 +107,10 @@
           "sessions": []
         }
       ],
-      "chronic_load": 249.0,
-      "acwr": 0.72,
-      "distance_change_pct": -100,
-      "baseline_distance_km": 6.7,
+      "chronic_load": 0.0,
+      "acwr": null,
+      "distance_change_pct": null,
+      "baseline_distance_km": 0.0,
       "flags": []
     },
     {
@@ -349,10 +245,10 @@
           "sessions": []
         }
       ],
-      "chronic_load": 214.0,
-      "acwr": 1.59,
-      "distance_change_pct": -100,
-      "baseline_distance_km": 3.4,
+      "chronic_load": 179.0,
+      "acwr": 1.91,
+      "distance_change_pct": null,
+      "baseline_distance_km": 0.0,
       "flags": [
         "load_spike"
       ]
@@ -464,13 +360,11 @@
           "sessions": []
         }
       ],
-      "chronic_load": 256.4,
-      "acwr": 1.01,
-      "distance_change_pct": 128,
-      "baseline_distance_km": 2.2,
-      "flags": [
-        "mileage_jump"
-      ]
+      "chronic_load": 260.1,
+      "acwr": 1.0,
+      "distance_change_pct": null,
+      "baseline_distance_km": 0.0,
+      "flags": []
     },
     {
       "week_id": "2026-W31",
@@ -587,10 +481,10 @@
           "sessions": []
         }
       ],
-      "chronic_load": 257.0,
-      "acwr": 0.63,
+      "chronic_load": 259.7,
+      "acwr": 0.62,
       "distance_change_pct": -100,
-      "baseline_distance_km": 3.0,
+      "baseline_distance_km": 1.7,
       "flags": [
         "load_drop"
       ]
@@ -1444,6 +1338,122 @@
         "load_spike",
         "mileage_jump"
       ]
+    },
+    {
+      "week_id": "2026-W39",
+      "start": "2026-09-21",
+      "end": "2026-09-27",
+      "label": "21\u201327 September",
+      "run_count": 1,
+      "run_distance_km": 5.5,
+      "run_time_min": 42,
+      "run_elevation_m": 0,
+      "avg_pace": "7:31",
+      "longest_run_km": 5.5,
+      "longest_run_name": "Morning Run",
+      "gym_count": 2,
+      "gym_time_min": 121,
+      "other_count": 0,
+      "total_time_min": 162,
+      "load": 324.0,
+      "easy_runs": 0,
+      "hard_runs": 1,
+      "unclassified_runs": 0,
+      "trained_days": 3,
+      "longest_rest_streak": 2,
+      "days": [
+        {
+          "date": "2026-09-21",
+          "weekday": "Mon",
+          "load": 0,
+          "kind": "rest",
+          "distance_km": 0.0,
+          "sessions": []
+        },
+        {
+          "date": "2026-09-22",
+          "weekday": "Tue",
+          "load": 54.0,
+          "kind": "gym",
+          "distance_km": 0.0,
+          "sessions": [
+            {
+              "name": "Morning Weight Training",
+              "kind": "gym",
+              "distance_km": 0.0,
+              "minutes": 51,
+              "avg_hr": 141.1,
+              "pace": null
+            }
+          ]
+        },
+        {
+          "date": "2026-09-23",
+          "weekday": "Wed",
+          "load": 175.0,
+          "kind": "run",
+          "distance_km": 5.5,
+          "sessions": [
+            {
+              "name": "Morning Run",
+              "kind": "run",
+              "distance_km": 5.53,
+              "minutes": 42,
+              "avg_hr": 180.7,
+              "pace": "7:31"
+            }
+          ]
+        },
+        {
+          "date": "2026-09-24",
+          "weekday": "Thu",
+          "load": 0,
+          "kind": "rest",
+          "distance_km": 0.0,
+          "sessions": []
+        },
+        {
+          "date": "2026-09-25",
+          "weekday": "Fri",
+          "load": 95.0,
+          "kind": "gym",
+          "distance_km": 0.0,
+          "sessions": [
+            {
+              "name": "Morning Weight Training",
+              "kind": "gym",
+              "distance_km": 0.0,
+              "minutes": 70,
+              "avg_hr": 142.5,
+              "pace": null
+            }
+          ]
+        },
+        {
+          "date": "2026-09-26",
+          "weekday": "Sat",
+          "load": 0,
+          "kind": "rest",
+          "distance_km": 0.0,
+          "sessions": []
+        },
+        {
+          "date": "2026-09-27",
+          "weekday": "Sun",
+          "load": 0,
+          "kind": "rest",
+          "distance_km": 0.0,
+          "sessions": []
+        }
+      ],
+      "chronic_load": 194.0,
+      "acwr": 1.67,
+      "distance_change_pct": 156,
+      "baseline_distance_km": 2.1,
+      "flags": [
+        "load_spike",
+        "mileage_jump"
+      ]
     }
   ],
   "reviews": {
@@ -1480,6 +1490,42 @@
           "role": "kind",
           "name": "Coach Amari",
           "text": "Add a relaxed 3\u20134\u202fkm easy run early next week to promote recovery and keep the weekly load under 250 while maintaining the strength work."
+        }
+      ],
+      "generated_by": "groq:openai/gpt-oss-120b"
+    },
+    "2026-W39": {
+      "headline": "5.5 km, 2 gym, 3 of 7 days",
+      "went_well": [
+        "2 strength sessions in the bank"
+      ],
+      "watch_out": [
+        "Training load jumped sharply on your recent average",
+        "Distance up 156% on your four-week norm"
+      ],
+      "opener": "kind",
+      "exchange": [
+        {
+          "role": "kind",
+          "name": "Coach Amari",
+          "comment": "Coach Dunkley called the 324 load a \u201cglaring spike\u201d and said the 156\u202f% mileage jump \u201cbarely scratches\u201d the 40\u202fkm goal. The increase was purposeful \u2013 moving from a 2.1\u202fkm baseline to a 5.5\u202fkm run and two strength sessions is solid progress toward rebuilding endurance after your tendon injuries. You kept a steady 7:31\u202fmin/km pace, trained on three days, and allowed a two\u2011day rest streak, which provides the balance we need right now. What Dunkley missed is the qualitative improvement in load distribution and the fact you stayed injury\u2011free this week."
+        },
+        {
+          "role": "snark",
+          "name": "Coach Dunkley",
+          "comment": "You logged a single 5.5\u2011km run and two gym sessions, pushing the load to 324 \u2013 another spike that the numbers don\u2019t forgive. The 156\u202f% mileage jump still leaves you well short of the 10\u2011km weekly target and you provided no easy runs to soften the stress. At least you limited training days to three and gave yourself a two\u2011day rest streak, but that hardly balances the overload."
+        }
+      ],
+      "next_week": [
+        {
+          "role": "kind",
+          "name": "Coach Amari",
+          "text": "Add one easy 3\u2011km run at an easy effort early next week to raise weekly volume without stressing the tendons, and see a physiotherapist if any soreness returns."
+        },
+        {
+          "role": "snark",
+          "name": "Coach Dunkley",
+          "text": "Add an easy 3\u2011km run early next week and keep the weekly load at or below 300; see a physiotherapist if any tendon soreness returns."
         }
       ],
       "generated_by": "groq:openai/gpt-oss-120b"
