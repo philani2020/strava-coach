@@ -1508,24 +1508,24 @@
         {
           "role": "kind",
           "name": "Coach Amari",
-          "comment": "Coach Dunkley\u2019s alarm about a \u201cglaring spike\u201d in load ignores that the 324 load this week is the direct result of the planned increase to two strength sessions and still sits at an ACWR of 1.67, well below risky thresholds. More importantly, you delivered a 5.5\u202fkm run at 7:31\u202fmin/km, raising your weekly distance from a 2.1\u202fkm baseline to 5.5\u202fkm \u2013 a 156\u202f% jump that moves you toward the 10\u202fkm goal despite the current focus on tendon recovery. You also kept three training days with only a two\u2011day rest streak, showing consistent effort while respecting the need for recovery. The only thing missing was any easy\u2011pace work to balance the harder run and strength work."
+          "comment": "Coach Dunkley\u2019s note about two runs totalling 7.2\u202fkm is factually wrong \u2013 you logged a single 5.5\u202fkm run this week. The load of 324 is indeed higher than last week\u2019s 298, but it was a planned, controlled step up to support your tendon rehab, not an uncontrolled spike. Your distance rose 156\u202f% from the 2.1\u202fkm baseline, you still hit two solid gym sessions (121\u202fmin total) and kept training to three days, preserving recovery. Dunkley completely missed that the two\u2011day rest streak and absence of any hard runs were intentional safeguards for your lower\u2011tendon injuries."
         },
         {
           "role": "snark",
           "name": "Coach Dunkley",
-          "comment": "Your load jumped to 324 this week, a textbook spike that dwarfs the modest 148\u2011176 range of the past month. You logged a single 5.5\u202fkm run at 7:31\u202fmin/km, which is still less than half of your 10\u202fkm weekly target. Zero easy runs and only two gym sessions mean you\u2019re flirting with an unbalanced stress profile, even though you did manage three training days. At best you kept a two\u2011day rest streak, but that offers little consolation for the overall overload."
+          "comment": "You logged a single 5.5\u202fkm run and two gym sessions, bringing the weekly load to 324\u202f\u2013 another clear spike. The distance is still well short of the 10\u202fkm target, and the lack of any easy runs leaves no room for recovery. At least you kept the training days to three, but that\u2019s barely enough to justify the load. The tendon history still warrants caution."
         }
       ],
       "next_week": [
         {
           "role": "kind",
           "name": "Coach Amari",
-          "text": "Fit a short, easy run of 2\u20133\u202fkm at a conversational pace early next week to re\u2011introduce low\u2011impact mileage and support tendon healing."
+          "text": "Add a short, easy 3\u202fkm run at a comfortable pace next week to keep the mileage progression gentle while continuing your current gym routine."
         },
         {
           "role": "snark",
           "name": "Coach Dunkley",
-          "text": "Fit a short, easy 2\u20113\u202fkm run at a conversational pace early next week to give your tendons a break from the current load."
+          "text": "Next week schedule a brief 3\u202fkm easy run at a comfortable pace and book a physiotherapy check to ensure the tendons tolerate the load."
         }
       ],
       "generated_by": "groq:openai/gpt-oss-120b"
