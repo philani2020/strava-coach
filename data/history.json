@@ -1,119 +1,6 @@
 {
   "weeks": [
     {
-      "week_id": "2026-W28",
-      "start": "2026-07-06",
-      "end": "2026-07-12",
-      "label": "6\u201312 July",
-      "run_count": 0,
-      "run_distance_km": 0.0,
-      "run_time_min": 0,
-      "run_elevation_m": 0,
-      "avg_pace": null,
-      "longest_run_km": 0,
-      "longest_run_name": null,
-      "gym_count": 2,
-      "gym_time_min": 101,
-      "other_count": 1,
-      "total_time_min": 133,
-      "load": 179.0,
-      "easy_runs": 0,
-      "hard_runs": 0,
-      "unclassified_runs": 0,
-      "trained_days": 3,
-      "longest_rest_streak": 2,
-      "days": [
-        {
-          "date": "2026-07-06",
-          "weekday": "Mon",
-          "load": 27.0,
-          "kind": "gym",
-          "distance_km": 0.0,
-          "sessions": [
-            {
-              "name": "Morning Weight Training",
-              "kind": "gym",
-              "distance_km": 0.0,
-              "minutes": 40,
-              "avg_hr": 127.2,
-              "pace": null
-            }
-          ]
-        },
-        {
-          "date": "2026-07-07",
-          "weekday": "Tue",
-          "load": 0,
-          "kind": "rest",
-          "distance_km": 0.0,
-          "sessions": []
-        },
-        {
-          "date": "2026-07-08",
-          "weekday": "Wed",
-          "load": 89.0,
-          "kind": "other",
-          "distance_km": 0.0,
-          "sessions": [
-            {
-              "name": "Morning Ride",
-              "kind": "other",
-              "distance_km": 0.0,
-              "minutes": 32,
-              "avg_hr": 164.7,
-              "pace": null
-            }
-          ]
-        },
-        {
-          "date": "2026-07-09",
-          "weekday": "Thu",
-          "load": 0,
-          "kind": "rest",
-          "distance_km": 0.0,
-          "sessions": []
-        },
-        {
-          "date": "2026-07-10",
-          "weekday": "Fri",
-          "load": 0,
-          "kind": "rest",
-          "distance_km": 0.0,
-          "sessions": []
-        },
-        {
-          "date": "2026-07-11",
-          "weekday": "Sat",
-          "load": 63.0,
-          "kind": "gym",
-          "distance_km": 0.0,
-          "sessions": [
-            {
-              "name": "Morning Weight Training",
-              "kind": "gym",
-              "distance_km": 0.0,
-              "minutes": 60,
-              "avg_hr": 141.1,
-              "pace": null
-            }
-          ]
-        },
-        {
-          "date": "2026-07-12",
-          "weekday": "Sun",
-          "load": 0,
-          "kind": "rest",
-          "distance_km": 0.0,
-          "sessions": []
-        }
-      ],
-      "chronic_load": 0.0,
-      "acwr": null,
-      "distance_change_pct": null,
-      "baseline_distance_km": 0.0,
-      "flags": []
-    },
-    {
       "week_id": "2026-W29",
       "start": "2026-07-13",
       "end": "2026-07-19",
@@ -245,13 +132,11 @@
           "sessions": []
         }
       ],
-      "chronic_load": 179.0,
-      "acwr": 1.91,
+      "chronic_load": 0.0,
+      "acwr": null,
       "distance_change_pct": null,
       "baseline_distance_km": 0.0,
-      "flags": [
-        "load_spike"
-      ]
+      "flags": []
     },
     {
       "week_id": "2026-W30",
@@ -360,8 +245,8 @@
           "sessions": []
         }
       ],
-      "chronic_load": 260.1,
-      "acwr": 1.0,
+      "chronic_load": 341.1,
+      "acwr": 0.76,
       "distance_change_pct": null,
       "baseline_distance_km": 0.0,
       "flags": []
@@ -481,10 +366,10 @@
           "sessions": []
         }
       ],
-      "chronic_load": 259.7,
-      "acwr": 0.62,
+      "chronic_load": 300.1,
+      "acwr": 0.54,
       "distance_change_pct": -100,
-      "baseline_distance_km": 1.7,
+      "baseline_distance_km": 2.5,
       "flags": [
         "load_drop"
       ]
@@ -605,10 +490,10 @@
           ]
         }
       ],
-      "chronic_load": 235.3,
-      "acwr": 0.1,
+      "chronic_load": 254.0,
+      "acwr": 0.09,
       "distance_change_pct": -100,
-      "baseline_distance_km": 1.3,
+      "baseline_distance_km": 1.7,
       "flags": [
         "load_drop",
         "gym_skipped"
@@ -1454,6 +1339,146 @@
         "load_spike",
         "mileage_jump"
       ]
+    },
+    {
+      "week_id": "2026-W40",
+      "start": "2026-09-28",
+      "end": "2026-10-04",
+      "label": "28\u20134 October",
+      "run_count": 1,
+      "run_distance_km": 1.9,
+      "run_time_min": 15,
+      "run_elevation_m": 0,
+      "avg_pace": "8:05",
+      "longest_run_km": 1.9,
+      "longest_run_name": "Lunch Run / walk",
+      "gym_count": 3,
+      "gym_time_min": 157,
+      "other_count": 2,
+      "total_time_min": 221,
+      "load": 142.0,
+      "easy_runs": 1,
+      "hard_runs": 0,
+      "unclassified_runs": 0,
+      "trained_days": 4,
+      "longest_rest_streak": 1,
+      "days": [
+        {
+          "date": "2026-09-28",
+          "weekday": "Mon",
+          "load": 28.0,
+          "kind": "gym",
+          "distance_km": 0.0,
+          "sessions": [
+            {
+              "name": "Morning Weight Training",
+              "kind": "gym",
+              "distance_km": 0.0,
+              "minutes": 37,
+              "avg_hr": 129.4,
+              "pace": null
+            }
+          ]
+        },
+        {
+          "date": "2026-09-29",
+          "weekday": "Tue",
+          "load": 0,
+          "kind": "rest",
+          "distance_km": 0.0,
+          "sessions": []
+        },
+        {
+          "date": "2026-09-30",
+          "weekday": "Wed",
+          "load": 31.0,
+          "kind": "gym",
+          "distance_km": 0.0,
+          "sessions": [
+            {
+              "name": "Morning Weight Training",
+              "kind": "gym",
+              "distance_km": 0.0,
+              "minutes": 54,
+              "avg_hr": 125.2,
+              "pace": null
+            }
+          ]
+        },
+        {
+          "date": "2026-10-01",
+          "weekday": "Thu",
+          "load": 0,
+          "kind": "rest",
+          "distance_km": 0.0,
+          "sessions": []
+        },
+        {
+          "date": "2026-10-02",
+          "weekday": "Fri",
+          "load": 8.0,
+          "kind": "other",
+          "distance_km": 0.0,
+          "sessions": [
+            {
+              "name": "Morning Padel",
+              "kind": "other",
+              "distance_km": 0.88,
+              "minutes": 28,
+              "avg_hr": 104.8,
+              "pace": "31:30"
+            },
+            {
+              "name": "Lunch Padel",
+              "kind": "other",
+              "distance_km": 0.71,
+              "minutes": 21,
+              "avg_hr": 117.5,
+              "pace": "29:51"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-03",
+          "weekday": "Sat",
+          "load": 75.0,
+          "kind": "run",
+          "distance_km": 1.9,
+          "sessions": [
+            {
+              "name": "Morning Weight Training",
+              "kind": "gym",
+              "distance_km": 0.0,
+              "minutes": 65,
+              "avg_hr": 135.9,
+              "pace": null
+            },
+            {
+              "name": "Lunch Run / walk",
+              "kind": "run",
+              "distance_km": 1.92,
+              "minutes": 15,
+              "avg_hr": 146.7,
+              "pace": "8:05"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-04",
+          "weekday": "Sun",
+          "load": 0,
+          "kind": "rest",
+          "distance_km": 0.0,
+          "sessions": []
+        }
+      ],
+      "chronic_load": 231.0,
+      "acwr": 0.61,
+      "distance_change_pct": -46,
+      "baseline_distance_km": 3.5,
+      "flags": [
+        "load_drop"
+      ]
     }
   ],
   "reviews": {
@@ -1526,6 +1551,40 @@
           "role": "snark",
           "name": "Coach Dunkley",
           "text": "Next week schedule a brief 3\u202fkm easy run at a comfortable pace and book a physiotherapy check to ensure the tendons tolerate the load."
+        }
+      ],
+      "generated_by": "groq:openai/gpt-oss-120b"
+    },
+    "2026-W40": {
+      "headline": "1.9 km, 3 gym, 4 of 7 days",
+      "went_well": [
+        "Trained on 4 days",
+        "3 strength sessions in the bank"
+      ],
+      "watch_out": [],
+      "opener": "snark",
+      "exchange": [
+        {
+          "role": "snark",
+          "name": "Coach Dunkley",
+          "comment": "You logged a single 1.9\u202fkm run at an 8:05 pace and three gym sessions totaling 157\u202fmin. The weekly load fell to 142, flagged as a load drop, which undercuts any claim of progress toward your 10\u202fkm target. At least you kept training days to four, but the lack of any easy runs leaves little room for the tendon recovery you\u2019re supposed to be prioritising. Overall the week feels more like a step back than a measured advance."
+        },
+        {
+          "role": "kind",
+          "name": "Coach Amari",
+          "comment": "You completed a 1.9\u202fkm run at an 8:05\u202fmin/km pace, three gym sessions totaling 157\u202fmin and four training days, keeping the overall load at 142 after the recent spikes. Coach Dunkley\u2019s criticism that the load drop \u2018undercuts any claim of progress\u2019 overlooks that the reduction was a purposeful step down from the 324\u2011load weeks of W38\u2011W39, which was essential for your lower\u2011tendon rehab. He also missed that you deliberately spaced rest days (no hard runs, a two\u2011day rest streak) and maintained consistent strength work, both of which protect the tendons while you rebuild volume. Sticking to this controlled schedule shows good discipline and sets a solid foundation for gradually increasing mileage."
+        }
+      ],
+      "next_week": [
+        {
+          "role": "snark",
+          "name": "Coach Dunkley",
+          "text": "Add an easy 2\u2011km run on Tuesday and another on Thursday, keeping the pace comfortable to rebuild volume without stressing the tendons."
+        },
+        {
+          "role": "kind",
+          "name": "Coach Amari",
+          "text": "Add a comfortable 2\u2011km easy run on Tuesday at a relaxed pace, then keep the rest days and strength work as you have to continue the gradual load increase."
         }
       ],
       "generated_by": "groq:openai/gpt-oss-120b"
